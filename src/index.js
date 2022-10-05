@@ -16,6 +16,8 @@ VK.init({
   apiId: 51433402,
 });
 
+const MAX_ID = 114030939;
+
 VK.Api.call(
   "friends.get",
   {
@@ -26,10 +28,14 @@ VK.Api.call(
   ({ response: { items } }) => {
     const date = new Date();
     const currentDay = date.getDate();
-    const currentMonth = date.getMonth();
+    const currentMonth = date.getMonth() + 1;
     const currentDate = `${currentDay}.${currentMonth}`;
 
-    const personsHasBirthdayToday = items.filter(({ bdate }) => {
+    const personsHasBirthdayToday = items.filter(({ id, bdate }) => {
+      if (id === MAX_ID) {
+        return currentDate.toString() === '6.10';
+      }
+
       if (bdate) {
         const [bday, bmonth] = bdate.split(".");
 

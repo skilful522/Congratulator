@@ -85,9 +85,13 @@ const max = {
 
 const personsHasBirthdayToday = [max];
 
-    personsHasBirthdayToday.forEach(() => {
-      body.innerHTML = body.innerHTML + getCardTemplate();
-    });
+if (personsHasBirthdayToday.length > 0) {
+  isPlayMusic = true;
+}
+
+personsHasBirthdayToday.forEach(() => {
+  body.innerHTML = body.innerHTML + getCardTemplate();
+});
 
 const personAvatars = getElementsByClass("person-avatar");
 const personNames = getElementsByClass("person-name");

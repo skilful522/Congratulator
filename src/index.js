@@ -18,16 +18,15 @@ VK.init({
 
 const MAX_ID = 114030939;
 
-const max = {
-  id: 114030939,
-  photo_200_orig:
-    "https://sun2.beltelecom-by-minsk.userapi.com/s/v1/if1/bQW6t5tpTfnJAyB0W7hSs_vt8cxRxrzdal72xqk1yYNAyqcBkkKkkz5hDLzF3MB-cV1HPGlC.jpg?size=200x355&quality=96&crop=0,0,1215,2160&ava=1",
-  track_code:
-    "b80a8cd1HbyRlcUzCanvmwYKIwrPu7DA8JN1l0rEsd1p-FQShXBw157xrzINrLnJJpCw43zSw9Tpn2L5Lrfu",
-  first_name: "Max",
-  last_name: "Pavlusevich",
-  can_access_closed: true,
-  is_closed: false,
+const user = {
+  "id": 235562440,
+  "bdate": "16.8.1997",
+  "photo_200_orig": "https://sun9-57.userapi.com/s/v1/ig2/trrJBafMYncYphza1_4zW-unrepHm7FHGHgcOrBIgwagF7BT7tOrthB_9cVbQT4XUlnoxd5LLQ9wBg0vCcVCsTkJ.jpg?size=200x200&quality=95&crop=348,0,1699,1699&ava=1",
+  "track_code": "b4673d97ZB_pTG456iOFfeNwdX_hkExLLO4y4oq6Gt8KvB-XjbUJdLt4ATO8L4Qu4cr93QT7P1814iWM7slF",
+  "first_name": "Елена",
+  "last_name": "Никитенко",
+  "can_access_closed": true,
+  "is_closed": true
 };
 
 // VK.Api.call(
@@ -43,7 +42,6 @@ const max = {
 //     const currentMonth = date.getMonth() + 1;
 //     const currentDate = `${currentDay}.${currentMonth}`;
 //
-//     const personsHasBirthdayToday = [max];
 //
 //     // const personsHasBirthdayToday = items.filter(({ id, bdate }) => {
 //     //   if (id === MAX_ID) {
@@ -83,7 +81,7 @@ const max = {
 //   }
 // );
 
-const personsHasBirthdayToday = [max];
+const personsHasBirthdayToday = [user];
 
 if (personsHasBirthdayToday.length > 0) {
   isPlayMusic = true;

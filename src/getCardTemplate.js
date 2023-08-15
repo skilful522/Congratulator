@@ -3,6 +3,7 @@ export const getCardTemplate = () => {
       <div class="outside">
         <div class="front">
           <p>С днём рождения!</p>
+          <p>Нажми на меня</p>
           <div class="cake">
             <div class="top-layer"></div>
             <div class="middle-layer"></div>
